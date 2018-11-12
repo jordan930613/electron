@@ -121,37 +121,39 @@ ui::KeyboardCode KeyboardCodeFromCharCode(base::char16 c, bool* shifted) {
 
     // numpad mappings
     case 0x60:
-      return ui::VKEY_NUMPAD0;
+      return ui::VKEY_0;
     case 0x61:
-      return ui::VKEY_NUMPAD1;
+      return ui::VKEY_1;
     case 0x62:
-      return ui::VKEY_NUMPAD2;
+      return ui::VKEY_2;
     case 0x63:
-      return ui::VKEY_NUMPAD3;
+      return ui::VKEY_3;
     case 0x64:
-      return ui::VKEY_NUMPAD4;
+      return ui::VKEY_4;
     case 0x65:
-      return ui::VKEY_NUMPAD5;
+      return ui::VKEY_5;
     case 0x66:
-      return ui::VKEY_NUMPAD6;
+      return ui::VKEY_6;
     case 0x67:
-      return ui::VKEY_NUMPAD7;
+      return ui::VKEY_7;
     case 0x68:
-      return ui::VKEY_NUMPAD8;
+      return ui::VKEY_8;
     case 0x69:
-      return ui::VKEY_NUMPAD9;
+      return ui::VKEY_9;
     case 0x6A:
       return ui::VKEY_MULTIPLY;
     case 0x6B:
-      return ui::VKEY_ADD;
+      // allow for use as +
+      return ui::VKEY_OEM_PLUS;
     case 0x6C:
       return ui::VKEY_SEPARATOR;
     case 0x6D:
-      return ui::VKEY_SUBTRACT;
+      // allow for use as -
+      return ui::VKEY_OEM_MINUS;
     case 0x6E:
-      return ui::VKEY_DECIMAL;
+      return ui::VKEY_OEM_PERIOD;
     case 0x6F:
-      return ui::VKEY_DIVIDE;
+      return ui::VKEY_OEM_2;
 
     // letter mappings
     case 'a':
