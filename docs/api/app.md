@@ -1074,7 +1074,7 @@ Show the app's about panel options. These options can be overridden with `app.se
   * `applicationName` String (optional) - The app's name.
   * `applicationVersion` String (optional) - The app's version.
   * `copyright` String (optional) - Copyright information.
-  * `credits` String (optional) - Credit information.
+  * `credits` String (optional) - Credit information. _macOS_
   * `website` String (optional) - The app's website. _Linux_
   * `version` String (optional) - The app's build version number. _macOS_
 

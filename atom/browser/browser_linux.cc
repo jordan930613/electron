@@ -143,7 +143,7 @@ bool Browser::IsUnityRunning() {
 }
 
 void Browser::ShowAboutPanel() {
-  std::string app_name, version, copyright, icon_path, credits, website;
+  std::string app_name, version, copyright, icon_path, website;
 
   GtkWidget* dialog = gtk_about_dialog_new();
 
@@ -154,16 +154,13 @@ void Browser::ShowAboutPanel() {
     gtk_about_dialog_set_version(GTK_ABOUT_DIALOG(dialog), version.c_str());
   if (about_panel_options_.GetString("copyright", &copyright))
     gtk_about_dialog_set_copyright(GTK_ABOUT_DIALOG(dialog), copyright.c_str());
-  if (about_panel_options_.GetString("credits", &credits))
-    gtk_about_dialog_set_authors(GTK_ABOUT_DIALOG(dialog), credits.c_str());
   if (about_panel_options_.GetString("website", &website))
     gtk_about_dialog_set_website(GTK_ABOUT_DIALOG(dialog), website.c_str());
   if (about_panel_options_.GetString("iconPath", &icon_path)) {
     GdkPixbuf* icon = gdk_pixbuf_new_from_file(icon_path.c_str(), NULL);
     gtk_about_dialog_set_logo(GTK_ABOUT_DIALOG(dialog), icon);
+    g_object_unref(icon), icon = NULL;
   }
-
-  g_object_unref(icon), icon = NULL;
 
   gtk_dialog_run(GTK_DIALOG(dialog));
   gtk_widget_destroy(dialog);
