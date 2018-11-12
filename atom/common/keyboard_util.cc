@@ -119,6 +119,41 @@ ui::KeyboardCode KeyboardCodeFromCharCode(base::char16 c, bool* shifted) {
     case ' ':
       return ui::VKEY_SPACE;
 
+    // numpad mappings
+    case 0x60:
+      return ui::VKEY_NUMPAD0;
+    case 0x61:
+      return ui::VKEY_NUMPAD1;
+    case 0x62:
+      return ui::VKEY_NUMPAD2;
+    case 0x63:
+      return ui::VKEY_NUMPAD3;
+    case 0x64:
+      return ui::VKEY_NUMPAD4;
+    case 0x65:
+      return ui::VKEY_NUMPAD5;
+    case 0x66:
+      return ui::VKEY_NUMPAD6;
+    case 0x67:
+      return ui::VKEY_NUMPAD7;
+    case 0x68:
+      return ui::VKEY_NUMPAD8;
+    case 0x69:
+      return ui::VKEY_NUMPAD9;
+    case 0x6A:
+      return ui::VKEY_MULTIPLY;
+    case 0x6B:
+      return ui::VKEY_ADD;
+    case 0x6C:
+      return ui::VKEY_SEPARATOR;
+    case 0x6D:
+      return ui::VKEY_SUBTRACT;
+    case 0x6E:
+      return ui::VKEY_DECIMAL;
+    case 0x6F:
+      return ui::VKEY_DIVIDE;
+
+    // letter mappings
     case 'a':
       return ui::VKEY_A;
     case 'b':
